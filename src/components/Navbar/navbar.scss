@@ -1,0 +1,73 @@
+@use "../../variables" as *;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $border-light;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-primary;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navbar-item {
+  list-style: none;
+  .navbar-link {
+    text-decoration: none;
+    color: $text-secondary;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $accent-primary;
+    }
+  }
+}
+
+.title-text {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: $text-primary;
+  margin: 0;
+}
+
+.title-highlight {
+  color: $accent-primary;
+}
+
+.resume-button {
+  background-color: $accent-primary;
+  color: $text-on-dark;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $accent-primary-hover;
+  }
+}

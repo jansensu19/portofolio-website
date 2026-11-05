@@ -1,0 +1,207 @@
+@use "../../variables" as *;
+
+.profile-container {
+  background-color: $bg-secondary;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+}
+
+.profile-left-content {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.profile-right-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $border-light;
+  border-radius: 24px;
+  background-color: $bg-primary;
+  position: relative;
+  padding: 1.25rem;
+  box-shadow: $shadow-md;
+  max-width: 380px;
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.available-container {
+  background-color: $status-available-bg;
+  color: $status-available-text;
+  border: 1px solid $status-available-border;
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.available-dot {
+  color: $status-available-dot;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.available-dot-small {
+  font-size: 0.5rem;
+}
+
+.available-text {
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+.profile-name {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: $text-primary;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+  }
+}
+
+.profile-title {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: $accent-primary;
+
+  @media (max-width: 768px) {
+    font-size: 1.85rem;
+  }
+}
+
+.profile-description {
+  font-size: 1rem;
+  color: $text-secondary;
+  text-align: justify;
+}
+
+.highlight {
+  color: $text-secondary;
+  font-weight: bold;
+}
+
+.profile-image {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+  border: 1px solid $border-light;
+}
+
+.skill-set-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background-color: $bg-secondary;
+  margin: 1rem;
+  border: 1px solid $border-light;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  justify-content: space-between;
+}
+
+.skill-set {
+  text-align: center;
+  h3 {
+    display: block;
+    font-size: 1.05rem;
+    color: $text-primary;
+  }
+  span {
+    font-size: 0.75rem;
+    color: $text-muted;
+  }
+}
+
+.info-download {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  button,
+  a {
+    margin: 1rem 0.5rem 1rem 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.resume-button {
+  align-items: center;
+  background-color: $accent-primary;
+  border: none;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $accent-primary-hover;
+  }
+}
+
+.explore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid $border-light;
+  transition: all 0.18s ease;
+
+  &:hover {
+    background-color: $bg-tertiary;
+  }
+}
+
+.core-stacks {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.stack-label {
+  color: $text-secondary;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.technical-name {
+  color: $text-secondary;
+  font-size: 0.8rem;
+  font-weight: 500;
+}

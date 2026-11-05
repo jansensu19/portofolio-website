@@ -1,0 +1,242 @@
+@use "../../variables" as *;
+
+.projects-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 1rem auto;
+}
+
+.projects-text {
+  text-align: left;
+}
+
+.projects-heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $accent-primary;
+  margin-bottom: 0.35rem;
+}
+
+.projects-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+}
+
+.projects-description {
+  color: $text-secondary;
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+  span {
+    font-weight: bold;
+  }
+}
+
+.framework-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $border-light;
+}
+
+.framework-tab {
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: $bg-primary;
+  color: $text-secondary;
+  border: 1px solid $border-light;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.15s ease;
+
+  &.active {
+    background: $text-primary;
+    color: $bg-primary;
+    border-color: $text-primary;
+  }
+}
+
+.framework-count {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.2);
+
+  &.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: $bg-primary;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: $bg-primary;
+  border: 1px solid $border-light;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-badges-image-container {
+  height: 190px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 1px solid $border-light;
+}
+
+.project-info-badges {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.framework-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #ffffff;
+  box-shadow: $shadow-sm;
+}
+
+.angular {
+  color: $accent-angular;
+  background-color: $accent-angular-bg;
+}
+
+.react {
+  color: $accent-react;
+  background-color: $accent-react-bg;
+}
+
+.reactNative {
+  color: $accent-reactNative;
+  background-color: $accent-reactNative-bg;
+}
+
+.info-link-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  color: $text-secondary;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-info {
+  text-align: left;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: $text-primary;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  margin-bottom: 1.15rem;
+  color: $text-secondary;
+}
+
+.project-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-tags {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 5px;
+  background: $bg-tertiary;
+  color: $text-secondary;
+  font-weight: 500;
+}
+
+.project-links {
+  margin-top: auto;
+  padding-top: 1.1rem;
+  border-top: 1px solid $border-light;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid $border-light;
+  transition: all 0.18s ease;
+}
+
+.mockup-window {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  font-size: 0.8rem;
+  color: $text-secondary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,146 @@
+@use "../../variables" as *;
+
+.experience-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: $bg-primary;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 1rem auto;
+}
+
+.experience-text {
+  text-align: left;
+}
+
+.experience-heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $accent-primary;
+  margin-bottom: 0.35rem;
+  margin-top: 1rem;
+}
+
+.experience-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+}
+
+.experience-education-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  text-align: left;
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.experience-card-container,
+.education-container {
+  background: $bg-primary;
+  border: 1px solid $border-light;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: $shadow-sm;
+}
+
+.experience-item,
+.education-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-left: 2px solid $border-light;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-item::before,
+.education-item::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $accent-primary;
+  border: 2px solid #ffffff;
+}
+
+.experience-date,
+.education-date {
+  color: $accent-primary;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.experience-card-title,
+.education-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.2rem 0;
+  color: $text-primary;
+}
+
+.experience-company {
+  font-size: 0.9rem;
+  color: $text-muted;
+  span {
+    font-size: 0.6rem;
+  }
+}
+
+.experience-responsibilities {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  color: $text-secondary;
+}
+
+.experience-list {
+  line-height: 1.4;
+  margin-bottom: 0.35rem;
+}
+
+.education-university {
+  font-size: 0.9rem;
+  color: $text-muted;
+  margin-bottom: 0.75rem;
+}
+
+.technical-container {
+  border-top: 1px solid $border-light;
+  padding-top: 1rem;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.technical-heading {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  color: $text-primary;
+}
+
+.technical-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

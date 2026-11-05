@@ -1,0 +1,97 @@
+@use "../../variables" as *;
+
+.contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 20px;
+  background-color: $bg-secondary;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: $text-primary;
+  margin-bottom: 20px;
+  text-align: left;
+  h2 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $accent-primary;
+    margin-bottom: 0.35rem;
+  }
+  h1 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: $text-primary;
+    margin: 0;
+  }
+  p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+}
+
+.contact-list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-box {
+  background: $bg-primary;
+  border: 1px solid $border-light;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: $shadow-sm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  text-align: left;
+
+  a {
+    text-decoration: none;
+    text-align: center;
+  }
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  color: $text-muted;
+  font-weight: 600;
+}
+
+.contact-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $text-primary;
+  word-break: break-all;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid $border-light;
+  transition: all 0.18s ease;
+  margin-top: 1rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
